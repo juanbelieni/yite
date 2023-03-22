@@ -93,7 +93,8 @@ fn main() -> Result<()> {
       screen.write((0, y), line)?;
     }
 
-    screen.update_cursor()?;
+    screen.draw_status_bar()?;
+    screen.draw_cursor()?;
     screen.flush()?;
 
     match read()? {
